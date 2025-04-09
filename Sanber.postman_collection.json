@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "07e945b1-2c63-48fb-9fd0-1be046ccfe9b",
+		"name": "Sanber",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15995448"
+	},
+	"item": [
+		{
+			"name": "Tugas 12",
+			"item": [
+				{
+					"name": "Nilai Mahasiswa",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nama\": \"Vincent by JSON\",\r\n    \"Nilai\": 79,\r\n    \"Mata Kuliah\": \"Matematika\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mahasiswa/nilai",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mahasiswa",
+								"nilai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nilai Mahasiswa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/mahasiswa/nilai",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mahasiswa",
+								"nilai"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tugas 13",
+			"item": [
+				{
+					"name": "Bioskop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nama\": \"Avengers\",\r\n    \"Lokasi\": \"Hollywood\",\r\n    \"Rating\": 7.89\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bioskop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bioskop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
