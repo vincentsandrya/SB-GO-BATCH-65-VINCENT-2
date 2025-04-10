@@ -1,6 +1,7 @@
 package main
 
 import (
+	"SB-GO-BATCH-65-VINCENT-2/controllers"
 	"SB-GO-BATCH-65-VINCENT-2/database"
 	"SB-GO-BATCH-65-VINCENT-2/model"
 	"encoding/json"
@@ -8,25 +9,30 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
 
 	database.ConnectDB()
 
-	database.GetBioskop()
-
-	// konfigurasi server
-	server := &http.Server{
-		Addr: ":8080",
-	}
+	// database.GetBioskop()
 
 	// routing
-	http.Handle("/bioskop", http.HandlerFunc(HandleBioskop))
+	router := gin.Default()
+
+	// http.Handle("/bioskop", http.HandlerFunc(HandleBioskop))
+	router.GET("/bioskop", controllers.GetAllBioskop)
+	router.GET("//bioskop/:id", controllers.GetBioskopById)
+	router.POST("/bioskop", controllers.InsertBioskop)
+	router.PUT("/bioskop/:id", controllers.UpdateBioskop)
+	router.DELETE("/bioskop/:id", controllers.DeleteBioskop)
+
+	router.Run(":8080")
 
 	// jalankan server
 	fmt.Println("server running at http://localhost:8080")
-	server.ListenAndServe()
 
 }
 

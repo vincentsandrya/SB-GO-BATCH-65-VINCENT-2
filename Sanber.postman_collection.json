@@ -129,6 +129,160 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Tugas 14",
+			"item": [
+				{
+					"name": "Bioskop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nama\": \"Avengers 4\",\r\n    \"Lokasi\": \"Hollywood\",\r\n    \"Rating\": 7.89\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bioskop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bioskop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bioskop",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bioskop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bioskop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bioskop by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bioskop/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bioskop",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bioskop",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nama\": \"Youths\",\r\n    \"Lokasi\": \"\",\r\n    \"Rating\": 7.89\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bioskop/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bioskop",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bioskop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bioskop/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bioskop",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
