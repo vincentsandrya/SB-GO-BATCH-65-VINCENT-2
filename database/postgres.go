@@ -12,11 +12,11 @@ import (
 )
 
 const (
-	host     = "localhost"
+	host     = "postgres.railway.internal"
 	port     = 5432
 	user     = "postgres"
-	password = "myB@nk88"
-	dbname   = "gosanber"
+	password = "taYjTpcCqMghKOfyzuyVHIzjTktElaHw"
+	dbname   = "railway"
 )
 
 var (
